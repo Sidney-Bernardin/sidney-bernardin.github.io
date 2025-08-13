@@ -3,10 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 
-    color: #dbdbdb;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    font-weight: bolder;
+    color: inherit;
 }
 
 body {
@@ -17,13 +16,30 @@ body {
     overflow: hidden;
     background-image: repeating-linear-gradient(180deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(225deg, rgb(15, 15, 15), rgb(15, 15, 15));
     font-size: 2rem;
+    color: #dbdbdb;
 }
 
-button {
+button,
+a {
+    display: flex;
+
     border: none;
+    gap: 0.25em;
+    padding: 0.5em;
 
     cursor: none;
     background: transparent;
+    text-decoration: none;
+}
+
+button *,
+a * {
+    position: relative;
+    z-index: -100;
+}
+
+i {
+    color: inherit;
 }
 
 /* ===== cousor ===== */
@@ -58,29 +74,42 @@ button {
 /* ===== Navbar ===== */
 .navbar {
     position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
+    box-sizing: border-box;
+    gap: 1em;
     width: 100%;
     padding: 1.5em;
 }
 
 .navbar .name {
-    float: left;
+    flex: 1;
+
+    font-weight: bolder;
+    text-wrap: nowrap;
+    text-align: center;
 }
 
-.navbar .resume-btn {
-    float: right;
+.navbar .center {
+    flex: 1;
 
-    padding: 0.5em;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 0.75em;
+    text-align: center;
 }
 
-/* ===== Contact ===== */
-.contact {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+.navbar .center span {
+    margin: 0 0.25em;
 
-    width: 50%;
-    padding: 2em;
+    text-wrap: nowrap;
+}
+
+.navbar .right {
+    display: flex;
+    justify-content: center;
+    flex: 1;
 }
 
 /* ===== Projects ===== */
@@ -93,23 +122,131 @@ button {
     width: 50%;
 }
 
-.projects .project {
+.projects button {
     display: flex;
 
+    gap: 0.5em;
     padding: 0.25em 0.5em;
 
     text-align: left;
     font-size: 1em;
 }
 
-.projects .project .num,
-.projects .project .year {
-    z-index: -100;
+.projects button .num,
+.projects button .year {
     flex: 1;
 }
 
-.projects .project .name {
-    z-index: -100;
+.projects button .name {
     display: flex;
     flex: 4;
+}
+
+/* ===== Overlay ===== */
+.project {
+    display: block;
+    cursor: auto;
+    transform: translateY(200%) rotate(20deg);
+    transition: 0.5s;
+    transform-origin: bottom center;
+    will-change: bottom;
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+
+    border: none;
+    width: 70%;
+    height: calc(100% - 5em);
+    padding: 0 2em;
+
+    color: #000;
+    background: #fff;
+}
+
+.project:hover+.cursor {
+    display: none;
+}
+
+.project:popover-open {
+    transform: rotate(0);
+}
+
+.project header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4em 0;
+
+    width: 100%;
+}
+
+.project button {
+    cursor: pointer;
+}
+
+.project header .left {
+    flex: 1;
+}
+
+.project header .left h1 {
+    color: #000;
+    font-size: 1.5em;
+}
+
+.project header .left p {
+    color: #000;
+}
+
+.project header .right {
+    flex: 2;
+}
+
+.project header .right button {
+    color: #ff7f7f;
+}
+
+.project .description {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1em 0 4em 0;
+}
+
+.project .description .links {
+    flex: 1;
+}
+
+.project .description p {
+    flex: 2;
+}
+
+@media (max-width: 1400px) {
+    .project {
+        width: 100%;
+        height: calc(100% - 6em);
+
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .projects {
+        width: 100%;
+    }
+
+    .projects button .year {
+        text-align: right;
+    }
+}
+
+@media (max-width: 475px) {
+    .navbar .right {
+        flex-wrap: wrap;
+    }
 }

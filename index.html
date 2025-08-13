@@ -13,51 +13,82 @@
         <!-- Navbar -->
         <div class="navbar">
             <p class="name">Sidney Bernardin</p>
-            <button class="resume-btn">resume</button>
+            <p class="center">
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    sidney.bernardin@gmail.com
+                </span>
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    183-461-3785
+                </span>
+            </p>
+            <div class="right">
+                <button class="resume-btn">
+                    <i class="fa-solid fa-file"></i>
+                    resume
+                </button>
+                <a href="http://github.com/Sidney-Bernardin">
+                    <i class="fa-brands fa-github"></i>
+                    github
+                </a>
+                <a href="http://linkedin.com/in/sidney-bernardin-04755b374">
+                    <i class="fa-brands fa-linkedin"></i>
+                    linkedin
+                </a>
+            </div>
         </div>
 
         <!-- Contact -->
         <div class="contact">
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                sidney.bernardin@gmail.com
-            </p>
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                183-461-3785
-            </p>
-            <a href="github.com/Sidney-Bernardin">
-                <i class="fa-brands fa-github"></i>
-                github
-            </a>
-            <a href="http://linkedin.com/in/sidney-bernardin-04755b374">
-                <i class="fa-brands fa-linkedin"></i>
-                linkedin
-            </a>
         </div>
 
         <!-- Projects -->
         <div class="projects">
-            <button class="project">
+            <button popovertarget="golive">
                 <div class="num">01</div>
                 <div class="name">Go-Live</div>
                 <div class="year">2023</div>
             </button>
-            <button class="project">
+            <button>
                 <div class="num">02</div>
                 <div class="name">Urithiru</div>
                 <div class="year">2024</div>
             </button>
-            <button class="project">
+            <button>
                 <div class="num">03</div>
                 <div class="name">NFL Discord Bot</div>
                 <div class="year">2023</div>
             </button>
-            <button class="project">
+            <button>
                 <div class="num">04</div>
                 <div class="name">Budget Tracker API</div>
                 <div class="year">2025</div>
             </button>
+        </div>
+
+        <div class="project" id="golive" popover>
+            <header>
+                <div class="left">
+                    <h1>Go-Live</h1>
+                    <p>full-stack</p>
+                </div>
+                <div class="right">
+                    <button popovertarget="golive" popovertargetaction="hide">
+                        <i class="fa-solid fa-xmark"></i>
+                        close
+                    </button>
+                </div>
+            </header>
+            <div class="description">
+                <div class="links">
+                    <a href="http://github.com/Sidney-Bernardin">
+                        <i class="fa-brands fa-github"></i>
+                        github
+                    </a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque vero dolores reprehenderit aliquid debitis sequi, repellat quam sapiente, ad odio facere quae et cumque consequuntur ea ex vitae fugit.</p>
+            </div>
         </div>
     </body>
 </html>

@@ -8,7 +8,7 @@ document.body.appendChild(cursorBorder)
 
 if (cursor) {
     window.addEventListener("mousemove", (e) => {
-        if (e.target.tagName !== "BUTTON") {
+        if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
 
             cursor.style = ""
             cursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`
