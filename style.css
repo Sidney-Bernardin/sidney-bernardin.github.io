@@ -164,12 +164,20 @@ i {
     background: #fff;
 }
 
+.project:popover-open {
+    transform: rotate(0);
+}
+
 .project:hover+.cursor {
     display: none;
 }
 
-.project:popover-open {
-    transform: rotate(0);
+.project a {
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
 }
 
 .project header {

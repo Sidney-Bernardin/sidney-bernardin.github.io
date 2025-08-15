@@ -50,20 +50,15 @@
                 <div class="name">Go-Live</div>
                 <div class="year">2023</div>
             </button>
-            <button>
+            <button popovertarget="urithiru">
                 <div class="num">02</div>
                 <div class="name">Urithiru</div>
                 <div class="year">2024</div>
             </button>
-            <button>
+            <button popovertarget="nfldiscordbot">
                 <div class="num">03</div>
                 <div class="name">NFL Discord Bot</div>
                 <div class="year">2023</div>
-            </button>
-            <button>
-                <div class="num">04</div>
-                <div class="name">Budget Tracker API</div>
-                <div class="year">2025</div>
             </button>
         </div>
 
@@ -80,15 +75,72 @@
                     </button>
                 </div>
             </header>
+
             <div class="description">
                 <div class="links">
-                    <a href="http://github.com/Sidney-Bernardin">
+                    <a href="http://github.com/Sidney-Bernardin/Go-Live">
                         <i class="fa-brands fa-github"></i>
                         github
                     </a>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque vero dolores reprehenderit aliquid debitis sequi, repellat quam sapiente, ad odio facere quae et cumque consequuntur ea ex vitae fugit.</p>
+                <p>Go Live is an RTMP/HLS based live-streaming application. After creating an account, users can stream live video from OBS (or another preferred streaming software) to Go Live's RTMP/HLS server. The server will broadcast the stream to anyone who joins its room through the Go Live web-app.</p>
             </div>
+
+            <img src="./go-live.png">
+        </div>
+
+        <div class="project" id="urithiru" popover>
+            <header>
+                <div class="left">
+                    <h1>Urithiru</h1>
+                    <p>back-end</p>
+                </div>
+                <div class="right">
+                    <button popovertarget="urithiru" popovertargetaction="hide">
+                        <i class="fa-solid fa-xmark"></i>
+                        close
+                    </button>
+                </div>
+            </header>
+
+            <div class="description">
+                <div class="links">
+                    <a href="http://github.com/Sidney-Bernardin/Urithiru">
+                        <i class="fa-brands fa-github"></i>
+                        github
+                    </a>
+                </div>
+                <p>Urithiru is a layer-4 reverse-proxy and load-balancer that can be easily configured using a .toml file.</p>
+            </div>
+
+            <img src="./urithiru.png">
+        </div>
+
+        <div class="project" id="nfldiscordbot" popover>
+            <header>
+                <div class="left">
+                    <h1>NFL Discord Bot</h1>
+                    <p>webhook bot</p>
+                </div>
+                <div class="right">
+                    <button popovertarget="nfldiscordbot" popovertargetaction="hide">
+                        <i class="fa-solid fa-xmark"></i>
+                        close
+                    </button>
+                </div>
+            </header>
+
+            <div class="description">
+                <div class="links">
+                    <a href="http://github.com/Sidney-Bernardin/NFL-Discord-Bot">
+                        <i class="fa-brands fa-github"></i>
+                        github
+                    </a>
+                </div>
+                <p>This is a Discord bot that lets users look up current stats for NFL players by web-scraping nfl.com.</p>
+            </div>
+
+            <img src="./nfldiscordbot.png">
         </div>
     </body>
 </html>
