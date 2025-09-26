@@ -3,9 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Sidney Bernardin | Portfolio</title>
+
         <link href="style.css" rel="stylesheet">
+        <link href="./highlight/styles/github.min.css" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/57e5da63fa.js" crossorigin="anonymous"></script>
+        <script src="./showdown-2.1.0/dist/showdown.min.js"></script>
+        <script src="./highlight/highlight.min.js"></script>
         <script src="main.js" defer></script>
     </head>
     <body>
@@ -18,36 +24,33 @@
                     <i class="fa-solid fa-envelope"></i>
                     sidney.bernardin@gmail.com
                 </span>
+                <span>|</span>
                 <span>
                     <i class="fa-solid fa-phone"></i>
                     183-461-3785
                 </span>
             </p>
             <div class="right">
-                <a href="./resume.pdf">
+                <a href="./resume.pdf" target="_blank">
                     <i class="fa-solid fa-file"></i>
                     resume
                 </a>
-                <a href="http://github.com/Sidney-Bernardin">
+                <a href="http://github.com/Sidney-Bernardin" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     github
                 </a>
-                <a href="http://linkedin.com/in/sidney-bernardin-04755b374">
+                <a href="http://linkedin.com/in/sidney-bernardin-04755b374" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                     linkedin
                 </a>
             </div>
         </div>
 
-        <!-- Contact -->
-        <div class="contact">
-        </div>
-
         <!-- Projects -->
         <div class="projects">
             <button popovertarget="golive">
                 <div class="num">01</div>
-                <div class="name">Go-Live</div>
+                <div class="name">GoLive</div>
                 <div class="year">2023</div>
             </button>
             <button popovertarget="urithiru">
@@ -62,10 +65,11 @@
             </button>
         </div>
 
+        <!-- GoLive -->
         <div class="project" id="golive" popover>
             <header>
                 <div class="left">
-                    <h1>Go-Live</h1>
+                    <h1>GoLive</h1>
                     <p>full-stack</p>
                 </div>
                 <div class="right">
@@ -78,15 +82,16 @@
 
             <div class="description">
                 <div class="links">
-                    <a href="http://github.com/Sidney-Bernardin/Go-Live">
+                    <a href="http://github.com/Sidney-Bernardin/Go-Live" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         github
                     </a>
                 </div>
-                <p>Go Live is an RTMP/HLS based live-streaming application. After creating an account, users can stream live video from OBS (or another preferred streaming software) to Go Live's RTMP/HLS server. The server will broadcast the stream to anyone who joins its room through the Go Live web-app.</p>
+                <p>Go Live is an RTMP/HLS based live-streaming application. After creating an account, users can stream live video from OBS (or another preferred streaming software) to Go Live's RTMP/HLS server. The server will broadcast the stream to anyone who joins it's room through the Go Live web-app.</p>
             </div>
 
-            <img src="./go-live.png">
+            <img src="./golive/main.png" class="thumbnail">
+            <div class="md"></div>
         </div>
 
         <div class="project" id="urithiru" popover>
@@ -105,7 +110,7 @@
 
             <div class="description">
                 <div class="links">
-                    <a href="http://github.com/Sidney-Bernardin/Urithiru">
+                    <a href="http://github.com/Sidney-Bernardin/Urithiru" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         github
                     </a>
@@ -113,7 +118,7 @@
                 <p>Urithiru is a layer-4 reverse-proxy and load-balancer that can be easily configured using a .toml file.</p>
             </div>
 
-            <img src="./urithiru.png">
+            <img src="./urithiru/a.png" class="thumbnail">
         </div>
 
         <div class="project" id="nfldiscordbot" popover>
@@ -132,7 +137,7 @@
 
             <div class="description">
                 <div class="links">
-                    <a href="http://github.com/Sidney-Bernardin/NFL-Discord-Bot">
+                    <a href="http://github.com/Sidney-Bernardin/NFL-Discord-Bot" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         github
                     </a>
@@ -140,7 +145,7 @@
                 <p>This is a Discord bot that lets users look up current stats for NFL players by web-scraping nfl.com.</p>
             </div>
 
-            <img src="./nfldiscordbot.png">
+            <img src="./nfl-discord-bot/a.png" class="thumbnail">
         </div>
     </body>
 </html>

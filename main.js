@@ -1,3 +1,15 @@
+const converter = new showdown.Converter()
+
+fetch("golive/readme.md")
+    .catch((err) => alert(err))
+    .then((res) => res.text())
+    .then((txt) => {
+        document.querySelector(".project#golive .md").innerHTML = converter.makeHtml(txt)
+        console.log(hljs.highlightAll())
+    })
+
+
+
 var cursor = document.createElement("div")
 cursor.classList.add("cursor")
 document.body.appendChild(cursor)

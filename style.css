@@ -1,20 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
     color: inherit;
 }
 
 body {
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 
     cursor: none;
     overflow: hidden;
-    background-image: repeating-linear-gradient(180deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(225deg, rgb(15, 15, 15), rgb(15, 15, 15));
+    background: #000;
+    /* background-image: repeating-linear-gradient(180deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(225deg, rgb(15, 15, 15), rgb(15, 15, 15)); */
     font-size: 2rem;
     color: #dbdbdb;
 }
@@ -87,6 +87,8 @@ i {
 .navbar .name {
     flex: 1;
 
+    margin: 0;
+
     font-weight: bolder;
     text-wrap: nowrap;
     text-align: center;
@@ -95,7 +97,8 @@ i {
 .navbar .center {
     flex: 1;
 
-    color: rgba(255, 255, 255, 0.25);
+    margin: 0;
+
     font-size: 0.75em;
     text-align: center;
 }
@@ -119,7 +122,7 @@ i {
     display: flex;
     flex-direction: column;
 
-    width: 50%;
+    width: 35%;
 }
 
 .projects button {
@@ -142,6 +145,10 @@ i {
     flex: 4;
 }
 
+.projects button .year {
+    text-align: right;
+}
+
 /* ===== Overlay ===== */
 .project {
     display: block;
@@ -156,7 +163,7 @@ i {
     bottom: 0;
 
     border: none;
-    width: 70%;
+    max-width: 125rem;
     height: calc(100% - 5em);
     padding: 0 2em;
 
@@ -174,10 +181,6 @@ i {
 
 .project a {
     cursor: pointer;
-}
-
-.project img {
-    width: 100%;
 }
 
 .project header {
@@ -198,11 +201,14 @@ i {
 }
 
 .project header .left h1 {
+    margin: 0;
+
     color: #000;
-    font-size: 1.5em;
 }
 
 .project header .left p {
+    margin: 0;
+
     color: #000;
 }
 
@@ -212,6 +218,7 @@ i {
 
 .project header .right button {
     color: #ff7f7f;
+    font-size: 1em;
 }
 
 .project .description {
@@ -230,26 +237,38 @@ i {
     flex: 2;
 }
 
-@media (max-width: 1400px) {
-    .project {
-        width: 100%;
-        height: calc(100% - 6em);
+.project .thumbnail {
+    width: 100%;
+    max-height: 100em;
+}
 
-        font-size: 1rem;
+.project .md {
+    img {
+        max-width: 100%;
+    }
+
+    pre code {
+        border-radius: 1em;
+    }
+
+    .float-right {
+        float: right;
+        padding-left: 1.5em;
+    }
+
+    a {
+        display: inline-block;
+
+        padding: 0;
+
+        color: #ff7f7f;
+        text-decoration: underline;
     }
 }
 
-@media (max-width: 700px) {
-    body {
-        font-size: 1.5rem;
-    }
-
-    .projects {
-        width: 100%;
-    }
-
-    .projects button .year {
-        text-align: right;
+@media (max-width: 75rem) {
+    .project {
+        font-size: 1rem;
     }
 }
 
