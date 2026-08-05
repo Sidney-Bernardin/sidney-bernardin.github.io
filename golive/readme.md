@@ -4,9 +4,7 @@
 
 > Microservices! Microservices! Microservices!
 
-### Users
-
-#### Architecture
+### Users and Architecture
 
 <img src="./golive/users-file-tree.png" class="float-right"/>
 
